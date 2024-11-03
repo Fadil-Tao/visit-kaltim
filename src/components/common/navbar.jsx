@@ -1,8 +1,23 @@
+import { useEffect, useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
 export default function NavBar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="flex justify-between items-center fixed top-0 bg-transparent z-10 w-full sm:py-8 sm:px-24 font-semibold text-2xl">
+      <nav 
+      className={`flex justify-between z-30 items-center fixed top-0 w-full sm:py-8 sm:px-24 font-semibold text-2xl transition-colors duration-300 ${
+        isScrolled ? "bg-black " : "bg-transparent "
+      }`}
+      >
       <div>
         <Link to={'/'}>
           Visit Kaltim
