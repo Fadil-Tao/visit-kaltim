@@ -8,10 +8,12 @@ export default function Landing() {
   return (
     <>
       <HeroSection />
-      <AboutSection/>
-      <PopularDestSection />
-      <TestimonialSection />
-      <GallerySection />
+      <AboutSection />
+      <div className="px-24">
+        <PopularDestSection />
+        <TestimonialSection/>
+        <GallerySection/>
+      </div>
     </>
   );
 }
