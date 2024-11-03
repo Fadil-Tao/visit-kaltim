@@ -1,14 +1,15 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/common/navbar";
+import Footer from "../components/common/footer";
 
 export default function RootLayout(){
    return(
     <>
         <NavBar/>
-        <main className="bg-black">
+        <main className="bg-[#121212]">
             <Outlet/>
         </main>
-        {/* <footer className="font-bold">Copyright Kelompok</footer> */}
+       <Footer/>
     </>
 
    )
