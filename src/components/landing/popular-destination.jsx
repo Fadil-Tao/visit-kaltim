@@ -1,3 +1,13 @@
 export default function PopularDestSection() {
-  return <div>gonna be Popular destination section</div>;
+  return (
+    <div id="popularDestination">
+      gonna be Popular destination section
+      gonna be Popular destination section
+      gonna be Popular destination section
+      gonna be Popular destination section
+      gonna be Popular destination section
+      gonna be Popular destination section
+      gonna be Popular destination section
+    </div>
+  );
 }
