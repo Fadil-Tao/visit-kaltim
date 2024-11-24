@@ -26,7 +26,7 @@ export default function TestimonialSection() {
         <p className=" font-semibold mb-8 text-5xl">Our Visitor</p>
         <p>Some Famous People That has been here</p>
       </div>
-    <div className="flex justify-evenly">
+    <div className="flex justify-evenly sm:flex-row flex-wrap">
         {testimonials.map((item) => {
             return (
                 <div className="py-5 px-5 w-[298px] text-center flex flex-col justify-center items-center gap-y-2 ">
