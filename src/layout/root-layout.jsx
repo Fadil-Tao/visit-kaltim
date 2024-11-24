@@ -1,16 +1,18 @@
-import { Outlet } from "react-router-dom";
 import NavBar from "../components/common/navbar";
 import Footer from "../components/common/footer";
+import { ParallaxProvider } from "react-scroll-parallax";
+import AnimatedOutlet from "./animated-outlet";
 
-export default function RootLayout(){
-   return(
+export default function RootLayout() {
+  return (
     <>
-        <NavBar/>
-        <main className="bg-[#121212]">
-            <Outlet/>
+      <ParallaxProvider>
+        <main className="relative bg-[#121212]">
+          <NavBar />
+          <AnimatedOutlet />
         </main>
-       <Footer/>
+        <Footer />
+      </ParallaxProvider>
     </>
-
-   )
+  );
 }
