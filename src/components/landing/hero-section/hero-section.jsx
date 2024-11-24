@@ -33,7 +33,7 @@ export default function HeroSection() {
   const videoMapping = [
     {
       url: dummyVid1,
-      place: "Mangrove",
+      place: "Mangrove Forest",
       labels: [
         {
           labelAppearAt: 1,
@@ -63,12 +63,12 @@ export default function HeroSection() {
       labels: [
         {
           labelAppearAt: 2,
-          label: "Kepulauan Yang Indah",
-          text: "Dont beleive me just watch",
-          xStart: 600,
-          yStart: 600,
-          endY: 800,
-          endX: 800,
+          label: "Dual-Layered Water",
+          text: " fresh water on the surface and saltwater belo",
+          xStart: 200,
+          yStart: 200,
+          endY: 300,
+          endX: 300,
           duration: 10000,
         },
       ],
@@ -79,13 +79,23 @@ export default function HeroSection() {
       labels: [
         {
           labelAppearAt: 2,
-          label: "Kepulauan Yang Indah",
+          label: "World Heritage",
           text: "Dont beleive me just watch",
-          xStart: 700,
-          yStart: 700,
-          endY: 200,
+          xStart: 100,
+          yStart: 200,
+          endY: 100,
+          endX: 500,
+          duration: 15000,
+        },
+        {
+          labelAppearAt: 2,
+          label: "Diverse Marine Life",
+          text: "Kepulauan Derawan is known for its rich marine biodiversity. It is home to rare species such as green sea turtles",
+          xStart: 300,
+          yStart: 500,
+          endY: 500,
           endX: 300,
-          duration: 5000,
+          duration: 15000,
         },
       ],
     },
@@ -103,8 +113,8 @@ export default function HeroSection() {
         <VideoPausedByToggleContext.Provider
           value={{ isPausedByToggle, setIsPausedByToggle }}
         >
-          <div className={`w-full h-screen overflow-hidden`}>
-            <div className={`h-full w-full relative`}>
+          <div className={`w-full h-screen overflow-hidden relative`}>
+            <div className={`sm:h-full h-screen w-full relative`}>
               {start&& (
                 <div className="absolute w-full h-full flex flex-col justify-center items-center gap-y-4 z-20">
                   <h1 className="font-bold text-5xl">Welcome To Kaltim</h1>
@@ -119,7 +129,7 @@ export default function HeroSection() {
                 </div>
               )}
               <div
-                className={`${isPausedByHover && "brightness-50"} `}
+                className={`${isPausedByHover && "brightness-50"} sm:h-auto h-screen`}
                 style={{
                   transform: `scale(${scale}) translate(${xPercent}%, ${yPercent}%)`,
                   transition: `transform 0.1s ease`,
@@ -152,7 +162,7 @@ export default function HeroSection() {
                 }
               })}
             </div>
-            <div className={`${isPausedByHover && "hidden"}`}>
+            <div className={`${isPausedByHover && "hidden"} absolute bottom-5 w-full`}>
               <HeroFooter />
             </div>
           </div>

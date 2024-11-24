@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import RootLayout from './layout/root-layout'
 import './index.css'
 import Landing from './pages/landing'
+import DestinationPage from './pages/destination'
+import DestinationDetailPage from './pages/destination-detail'
 
 
 const router = createBrowserRouter([
@@ -16,12 +18,12 @@ const router = createBrowserRouter([
             element:<Landing/>
         },
           {
-              path:'/destinations',
-              element: <div>Gugu crazy gaga</div>
+              path:'/destination',
+              element: <DestinationPage/>
           },
           {
-              path:'/destinations/:slug',
-              element: <div className="text-blue-900">Destination slug details page</div>
+              path:'/destination/:slug',
+              element: <DestinationDetailPage/>
           }
       ]   
   }
