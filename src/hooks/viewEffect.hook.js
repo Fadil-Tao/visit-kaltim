@@ -34,6 +34,9 @@ const useScaleTransformPercentage = () => {
         })    
     }
 
+    function calculatePercentageOnMobile(){
+        setXYPercent()
+    }
     useEffect(()=> {
         calculatePercentage()
     }, [mousePosition])
