@@ -141,7 +141,7 @@ function MobileHeroSection() {
             translateY: [-25, 50],
           },
         ]}
-        className="h-full w-full object-cover sm:object-fill"
+        className="h-screen w-full object-cover sm:object-fill"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-y-5">
         <p className="text-center text-4xl font-bold text-slate-200 text-shadow-5xl">
