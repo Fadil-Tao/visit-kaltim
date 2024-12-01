@@ -1,7 +1,6 @@
 import { HashLink as Link } from "react-router-hash-link";
 
-
-export default function DestinationSection({ id, title,desc, items }) {
+export default function DestinationSection({ id, title, desc, items }) {
   return (
     <section
       id={id}
@@ -16,17 +15,21 @@ export default function DestinationSection({ id, title,desc, items }) {
       </div>
       {items.map((item, index) => {
         return (
-          <Link key={index}
-          to={`${item.to}#banner`}
+          <Link
+            key={index}
+            to={`/destination/${item.title}#banner`}
             className={`rounded-2xl ${(index + 1) % 3 === 0 ? "col-span-2" : "col-span-1"} relative overflow-hidden`}
           >
             <img
-              src={item.img}
+              src={item.banner_url}
               alt=""
               className="h-72 w-full transform rounded-2xl object-cover transition-transform hover:scale-125"
             />
             <p className="absolute bottom-4 left-4 rounded-md bg-black bg-opacity-50 px-2 py-1 text-lg font-semibold transition-all group-hover:bg-opacity-80">
-              {item.text}
+              {item.title
+                .split("_")
+                .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+                .join(" ")}
             </p>
           </Link>
         );
