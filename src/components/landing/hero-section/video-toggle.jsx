@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import LocationMap from "./location-map";
+import { useContext } from "react";
 import { Play, Pause } from "lucide-react";
 import { VideoPausedByToggleContext } from "../../../context/video.context";
 
@@ -12,7 +11,6 @@ export default function VideoToggle() {
   return (
     <div className="flex justify-between items-center gap-3">
       <button onClick={handlePlay}>{isPausedByToggle ? <Play size={28} /> : <Pause size={30}/>}</button>
-      <LocationMap />
     </div>
   );
 }
