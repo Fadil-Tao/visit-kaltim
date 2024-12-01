@@ -7,23 +7,19 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export default function Highlight() {
+export default function Highlight({ array }) {
   return (
     <div className="w-full">
-    <p className="text-5xl font-semibold my-12">Highlight</p>
+      <p className="my-12 text-5xl font-semibold">Highlight</p>
       <Carousel className="w-full">
         <CarouselContent className="-ml-1">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {array.map((item, index) => (
             <CarouselItem
               key={index}
-              className="pl-1 md:basis-1/2 lg:basis-1/3"
+              className=" md:basis-1/2 lg:basis-1/3 "
             >
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-2xl font-semibold">{index + 1}</span>
-                  </CardContent>
-                </Card>
+              <div className=" w-full h-full ">
+                    <img src={item} alt="" className=" object-cover w-full h-full rounded-xl" />
               </div>
             </CarouselItem>
           ))}

@@ -3,24 +3,38 @@ import AboutSection from "@/components/dest-detail/about";
 import DetailSection from "@/components/dest-detail/detail";
 import Highlight from "@/components/dest-detail/highlight";
 import AnimatedLayout from "@/layout/animated-layout";
+import { Destinations } from "@/data/fakedata";
+import { useParams } from "react-router-dom";
+
 export default function DestinationDetailPage() {
+  const { slug } = useParams();
+  let destination = Destinations.find((item) => item.title === slug);
+
+  if (destination === undefined){
+    return <div className="min-h-screen w-full flex justify-center items-center">404 NOT FOUND</div>
+  }
+
   return (
     <>
       <AnimatedLayout>
         <Banner
-          title={"Gunung Fajri"}
-          img={
-            "https://wallpapercat.com/w/full/b/1/4/1518609-3840x2160-desktop-4k-mount-fuji-japan-wallpaper-image.jpg"
-          }
-          location={"Honshu, Japan"}
+          title={destination.title
+            .split("_")
+            .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+            .join(" ")}
+          img={destination.banner_url}
         />
-        <AboutSection />
+        <AboutSection
+          text={destination.about}
+          proximity={destination.proximity}
+          highlight={destination.highlight}
+        />
         <div className="gap-y-12 px-5 sm:grid sm:px-24">
-          <DetailSection />
-          <Highlight />
+          <DetailSection text={destination.details} />
+          <Highlight array={destination.highlights} />
           <p className="my-12 text-5xl">Location</p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26030.395553315946!2d138.70676380614015!3d35.360623252281506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019629a42fdc899%3A0xa6a1fcc916f3a4df!2sGn.%20Fuji!5e0!3m2!1sid!2sid!4v1732473106828!5m2!1sid!2sid"
+            src={Destinations[0].location_src}
             className="w-full rounded-xl"
             height="450"
             style={{ border: 0 }}

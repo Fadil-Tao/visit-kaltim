@@ -1,16 +1,17 @@
-import mangrove from "../../assets/mangrove.webp";
-import derawan from "../../assets/DERAWAN.webp";
-import labuan from "../../assets/labuan.webp";
 import PopularDestinationCard from "./popular-destination/Card";
 import { HashLink as Link } from "react-router-hash-link";
 import { ArrowRight } from "lucide-react";
+import { Destinations } from "@/data/fakedata";
 
 export default function PopularDestSection() {
-  const places = [
-    { img: derawan, title: "Derawan", to: "derawan" },
-    { img: labuan, title: "Labuan Cermin", to: "labuan" },
-    { img: mangrove, title: "Mangrove Forest", to: "mangrove-bpp" },
-  ];
+  const destination = Destinations.reduce((acc, item) => {
+    if (!acc.some((dest) => dest.type === item.type)) {
+      acc.push(item);
+    }
+    return acc;
+  }, []);
+
+  console.log(destination)
   return (
     <div id="popularDestination" className="py-16">
       <div>
@@ -33,12 +34,15 @@ export default function PopularDestSection() {
         </div>
       </div>
       <div className="flex w-full flex-wrap gap-x-4 sm:mt-16 sm:flex-nowrap">
-        {places.map((item) => {
+        {destination.map((item) => {
           return (
             <PopularDestinationCard
-              title={item.title}
-              src={item.img}
-              to={item.to}
+              title={item.title
+                .split("_")
+                .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+                .join(" ")}
+              src={item.banner_url}
+              to={item.title}
             />
           );
         })}

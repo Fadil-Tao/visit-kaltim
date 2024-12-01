@@ -4,70 +4,35 @@ import StickyNav from "@/components/destination/sticky-nav";
 import DestinationSection from "@/components/destination/destination-section";
 import SearchDestination from "@/components/destination/search-bar";
 import AnimatedLayout from "@/layout/animated-layout";
+import { Destinations } from "@/data/fakedata";
 
 export default function DestinationPage() {
-  const holiday = [
-    {
-      img: "https://govt.chinadaily.com.cn/images/202110/28/617a679c498e6a12d107c9a4.jpeg",
-      text: "Ghibli IRL frfr",
-      to: "/destination/nigero",
-    },
-    {
-      img: "https://govt.chinadaily.com.cn/images/202110/28/617a679c498e6a12d107c9a4.jpeg",
-      text: "Ghibli IRL frfr",
-      to: "/destination/nigero",
-    },
-    {
-      img: "https://govt.chinadaily.com.cn/images/202110/28/617a679c498e6a12d107c9a4.jpeg",
-      text: "Ghibli IRL frfr",
-      to: "/destination/nigero",
-    },
-    {
-      img: "https://govt.chinadaily.com.cn/images/202110/28/617a679c498e6a12d107c9a4.jpeg",
-      text: "Ghibli IRL frfr",
-      to: "/destination/nigero",
-    },
-    {
-      img: "https://govt.chinadaily.com.cn/images/202110/28/617a679c498e6a12d107c9a4.jpeg",
-      text: "Ghibli IRL frfr",
-      to: "/destination/nigero",
-    },
-    {
-      img: "https://govt.chinadaily.com.cn/images/202110/28/617a679c498e6a12d107c9a4.jpeg",
-      text: "Ghibli IRL frfr",
-      to: "/destination/nigero",
-    },
-  ];
+
+  const beaches = Destinations.filter((item) => (item.type === 'beach'))
+  const nature = Destinations.filter((item) => (item.type === 'nature'))
+  const other = Destinations.filter((item) => (item.type === 'other'))
 
   return (
     <>
       <AnimatedLayout>
-        <Banner
-          title={"DESTINATION"}
-          location={"Zhangjiajie National Forest Park"}
-          img={huaGuang}
-        />
-        <div className="w-full gap-y-2 px-5 py-8 sm:grid sm:px-24">
-          <p className="text-xl sm:px-4">Quickly search where you want to go</p>
-          <SearchDestination />
-        </div>
+        <Banner title={"DESTINATION"} img={huaGuang} />
         <div className="gap-y-28 px-5 sm:grid sm:px-24">
           <StickyNav />
           <DestinationSection
             id={"beaches"}
-            items={holiday}
+            items={beaches}
             title={"Beaches"}
             desc={"Best beaches for your holiday"}
           />
           <DestinationSection
             id={"nature"}
-            items={holiday}
+            items={nature}
             title={"Nature"}
             desc={"Wanna break from reality? come here to feels mother nature"}
           />
           <DestinationSection
             id={"other"}
-            items={holiday}
+            items={other}
             title={"Other"}
             desc={"Kaltim is not just two of that, there's more to explore !!"}
           />
