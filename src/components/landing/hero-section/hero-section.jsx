@@ -39,22 +39,22 @@ export default function HeroSection() {
   const videoMapping = [
     {
       url: "https://www.dropbox.com/scl/fi/nfmvuywq6kzhcy06rsqtb/Derawan-1080p.mp4?rlkey=k088tyy600khrklskhh9alqk9&st=biiq9s09&dl=0",
-      place: "Mangrove Forest",
+      place: "Derawan",
     },
     {
       url: "https://www.dropbox.com/scl/fi/udbrsvd1ihzs0wvi05j9l/Kumala-1080p.mp4?rlkey=ob1a6yvd7544gvf16ov6dhv5c&st=mbs4sb7f&dl=0",
-      place: "Labuan",
+      place: "Raja Island",
     },
     {
       url: "https://www.dropbox.com/scl/fi/kblkxzqmgn3z250x3m247/Mangrove-River-1080p.mp4?rlkey=7xwlys4n4ne6npsikjdgz7pw7&st=irgrc8zk&dl=0",
-      place: "Derawan",
+      place: "Mangrove River",
     },
   ];
 
   useEffect(() => {
     setCurrentPlace(videoMapping[index].place);
 
-    console.log(isLoading)
+    console.log(isLoading);
   }, [index, isLoading]);
 
   return (
