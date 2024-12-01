@@ -6,6 +6,7 @@ import './index.css'
 import Landing from './pages/landing'
 import DestinationPage from './pages/destination'
 import DestinationDetailPage from './pages/destination-detail'
+import GalleryPage from './pages/gallery'
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
           {
               path:'/destination',
               element: <DestinationPage/>
+          },
+          {
+              path:'/gallery',  
+              element: <GalleryPage/>
           },
           {
               path:'/destination/:slug',

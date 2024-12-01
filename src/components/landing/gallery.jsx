@@ -1,57 +1,21 @@
+import { Destinations } from "@/data/fakedata";
 import { Dot, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function GallerySection() {
-  const gallery = [
-    {
-      title: "Balikpapan Botanical Garden Tour",
-      place: "Balikpapan, East Kalimantan",
-      img: "https://bumijourney.com/wp-content/uploads/2022/08/Balikpapan-Botanical-Garden-Tour.png",
-      date: "Apr 04, 2024",
-      summary:
-        "Kenapa why selalu always? Karena because tidak pernah never.Sebenarnya actually menginginkan want, namun but akan will jika if sering often.Sayangnya sadly hampir almost dan and jarang seldom.",
-      readEst: "6 min read",
-      to: "",
-    },
-    {
-      title: "Balikpapan Botanical Garden Tour",
-      place: "Balikpapan, East Kalimantan",
-      img: "https://bumijourney.com/wp-content/uploads/2022/08/Balikpapan-Botanical-Garden-Tour.png",
-      date: "Apr 04, 2024",
-      summary:
-        "Kenapa why selalu always? Karena because tidak pernah never.Sebenarnya actually menginginkan want, namun but akan will jika if sering often.Sayangnya sadly hampir almost dan and jarang seldom.",
-      readEst: "6 min read",
-      to: "",
-    },
-    {
-      title: "Balikpapan Botanical Garden Tour",
-      place: "Balikpapan, East Kalimantan",
-      img: "https://bumijourney.com/wp-content/uploads/2022/08/Balikpapan-Botanical-Garden-Tour.png",
-      date: "Apr 04, 2024",
-      summary:
-        "Kenapa why selalu always? Karena because tidak pernah never.Sebenarnya actually menginginkan want, namun but akan will jika if sering often.Sayangnya sadly hampir almost dan and jarang seldom.",
-      readEst: "6 min read",
-      to: "",
-    },
-    {
-      title: "Balikpapan Botanical Garden Tour",
-      place: "Balikpapan, East Kalimantan",
-      img: "https://bumijourney.com/wp-content/uploads/2022/08/Balikpapan-Botanical-Garden-Tour.png",
-      date: "Apr 04, 2024",
-      summary:
-        "Kenapa why selalu always? Karena because tidak pernah never.Sebenarnya actually menginginkan want, namun but akan will jika if sering often.Sayangnya sadly hampir almost dan and jarang seldom.",
-      readEst: "6 min read",
-      to: "",
-    },
-  ];
+
+  const randomGallery = Destinations.sort(() => 0.5 - Math.random()).slice(
+    0,
+    4,
+  );
 
   return (
     <div id="gallery" className="w-full py-16">
-      <div className="flex items-center justify-between mb-5">
-          <h3 className="text-2xl sm:text-5xl font-semibold">Gallery</h3>
+      <div className="mb-5 flex items-center justify-between">
+        <h3 className="text-2xl font-semibold sm:text-5xl">Gallery</h3>
         <Link
           to="/gallery"
-          className="group inline-flex items-center sm:text-2xl text-blue-500 hover:text-blue-700"
+          className="group inline-flex items-center text-blue-500 hover:text-blue-700 sm:text-2xl"
         >
           See More
           <span
@@ -63,28 +27,28 @@ export default function GallerySection() {
         </Link>
       </div>
       <div className="flex flex-wrap justify-between">
-        {gallery.map((item) => {
+        {randomGallery.map((item) => {
           return (
-            <div className="flex w-[580px] flex-col gap-y-2">
+            <Link
+              className="flex w-[580px] h-[450px] flex-col gap-y-2"
+              to={`/gallery`}
+            >
               <div className="h-2/3 w-full">
                 <img
-                  src={item.img}
+                  src={item.banner_url}
                   alt=""
                   className="h-full w-full rounded-lg object-cover"
                 />
               </div>
               <div className="flex w-full justify-between py-2">
-                <p>{item.place}</p>
-                <div className="flex">
-                  <p>{item.date}</p>
-                  <Dot />
-                  <p>{item.readEst}</p>
-                </div>
+                <p>
+                  {item.title
+                    .split("_")
+                    .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+                    .join(" ")}
+                </p>
               </div>
-              <p className="text-4xl font-semibold">{item.title}</p>
-              <p className="">{item.summary}</p>
-              <Link>See Full Post</Link>
-            </div>
+            </Link>
           );
         })}
       </div>
