@@ -6,6 +6,7 @@ import {
   VideoPausedByHoverContext,
   VideoPausedByToggleContext,
   videoNavigationContext,
+  VideoMutedbyToggleContext,
 } from "../../../context/video.context";
 import MovingLabel from "./moving-label";
 import { ParallaxBanner } from "react-scroll-parallax";
@@ -23,6 +24,7 @@ export default function HeroSection() {
   const [timePassed, setTimePassed] = useState(0);
   const [start, setStart] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
 
   const handleProgress = ({ playedSeconds }) => {
     setTimePassed(playedSeconds);
@@ -58,74 +60,78 @@ export default function HeroSection() {
   }, [index, isLoading]);
 
   return (
-    <videoNavigationContext.Provider value={{ index, setIndex, currentPlace }}>
-      <VideoPausedByHoverContext.Provider
-        value={{ isPausedByHover, setIsPausedByHover }}
+    <VideoMutedbyToggleContext.Provider value={{ isMuted, setIsMuted }}>
+      <videoNavigationContext.Provider
+        value={{ index, setIndex, currentPlace }}
       >
-        <VideoPausedByToggleContext.Provider
-          value={{ isPausedByToggle, setIsPausedByToggle }}
+        <VideoPausedByHoverContext.Provider
+          value={{ isPausedByHover, setIsPausedByHover }}
         >
-          <MobileHeroSection />
-          <div
-            className={`relative hidden h-screen w-full overflow-hidden sm:block`}
+          <VideoPausedByToggleContext.Provider
+            value={{ isPausedByToggle, setIsPausedByToggle }}
           >
-            <div className={`relative h-screen w-full sm:h-full`}>
-              {isLoading && (
-                <div className="absolute z-50 flex h-full w-full items-center justify-center bg-black/70">
-                  <div className="text-white">
-                    <div className="h-12 w-12 animate-spin rounded-full border-4 border-white border-t-transparent"></div>
+            <MobileHeroSection />
+            <div
+              className={`relative hidden h-screen w-full overflow-hidden sm:block`}
+            >
+              <div className={`relative h-screen w-full sm:h-full`}>
+                {isLoading && (
+                  <div className="absolute z-50 flex h-full w-full items-center justify-center bg-black/70">
+                    <div className="text-white">
+                      <div className="h-12 w-12 animate-spin rounded-full border-4 border-white border-t-transparent"></div>
+                    </div>
                   </div>
+                )}
+                {start && !isLoading && (
+                  <div className="absolute z-20 flex h-full w-full flex-col items-center justify-center gap-y-4">
+                    <h1 className="text-5xl font-bold">Welcome To Kaltim</h1>
+                    <p className="text-2xl">
+                      Discover New Places and Create Unforgettable Memories
+                    </p>
+                    <button
+                      onClick={() => {
+                        setStart(false);
+                        setIsPausedByHover(false);
+                        setIsPausedByToggle(false);
+                      }}
+                      className="rounded-full border border-white px-7 py-2 text-xl"
+                    >
+                      Start
+                    </button>
+                  </div>
+                )}
+                <div
+                  className={`${isPausedByHover && "brightness-50"} h-screen sm:h-auto`}
+                  style={{
+                    transform: `scale(${scale}) translate(${xPercent}%, ${yPercent}%)`,
+                    transition: `transform 0.1s ease`,
+                  }}
+                >
+                  <ReactPlayer
+                    ref={videoPlayerRef}
+                    url={videoMapping[index].url}
+                    muted={isMuted}
+                    playing={!isPausedByHover && !isPausedByToggle}
+                    width={"100%"}
+                    height={"100%"}
+                    onProgress={handleProgress}
+                    onEnded={handleVideoEnded}
+                    onReady={() => setIsLoading(false)}
+                    onBuffer={() => setIsLoading(true)}
+                    onBufferEnd={() => setIsLoading(false)}
+                  />
                 </div>
-              )}
-              {start && !isLoading && (
-                <div className="absolute z-20 flex h-full w-full flex-col items-center justify-center gap-y-4">
-                  <h1 className="text-5xl font-bold">Welcome To Kaltim</h1>
-                  <p className="text-2xl">
-                    Discover New Places and Create Unforgettable Memories
-                  </p>
-                  <button
-                    onClick={() => {
-                      setStart(false);
-                      setIsPausedByHover(false);
-                      setIsPausedByToggle(false);
-                    }}
-                    className="rounded-full border border-white px-7 py-2 text-xl"
-                  >
-                    Start
-                  </button>
-                </div>
-              )}
+              </div>
               <div
-                className={`${isPausedByHover && "brightness-50"} h-screen sm:h-auto`}
-                style={{
-                  transform: `scale(${scale}) translate(${xPercent}%, ${yPercent}%)`,
-                  transition: `transform 0.1s ease`,
-                }}
+                className={`${isPausedByHover && "hidden"} absolute bottom-20 w-full`}
               >
-                <ReactPlayer
-                  ref={videoPlayerRef}
-                  url={videoMapping[index].url}
-                  muted={true}
-                  playing={!isPausedByHover && !isPausedByToggle}
-                  width={"100%"}
-                  height={"100%"}
-                  onProgress={handleProgress}
-                  onEnded={handleVideoEnded}
-                  onReady={() => setIsLoading(false)}
-                  onBuffer={() => setIsLoading(true)}
-                  onBufferEnd={() => setIsLoading(false)}
-                />
+                <HeroFooter />
               </div>
             </div>
-            <div
-              className={`${isPausedByHover && "hidden"} absolute bottom-20 w-full`}
-            >
-              <HeroFooter />
-            </div>
-          </div>
-        </VideoPausedByToggleContext.Provider>
-      </VideoPausedByHoverContext.Provider>
-    </videoNavigationContext.Provider>
+          </VideoPausedByToggleContext.Provider>
+        </VideoPausedByHoverContext.Provider>
+      </videoNavigationContext.Provider>
+    </VideoMutedbyToggleContext.Provider>
   );
 }
 
