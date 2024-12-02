@@ -34,7 +34,7 @@ export default function DestinationDetailPage() {
           <Highlight array={destination.highlights} />
           <p className="my-12 text-5xl">Location</p>
           <iframe
-            src={Destinations[0].location_src}
+            src={destination.location_src}
             className="w-full rounded-xl"
             height="450"
             style={{ border: 0 }}
