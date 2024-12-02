@@ -14,7 +14,7 @@ export default function AboutSection({text,proximity,highlight}) {
         <div className="flex flex-col items-center justify-center gap-y-3 sm:gap-y-12 sm:p-16 sm:px-32">
           <p className="text-5xl">Highlight</p>
           <Star size={72} />
-          <p>{highlight}</p>
+          <p dangerouslySetInnerHTML={{__html: highlight}}></p>
         </div>
         <div className="flex flex-col items-center justify-center sm:gap-y-12 sm:p-16 sm:px-32">
           <p className="text-5xl">Proximity</p>
