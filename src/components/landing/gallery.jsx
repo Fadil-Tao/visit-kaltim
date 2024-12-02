@@ -30,7 +30,7 @@ export default function GallerySection() {
         {randomGallery.map((item) => {
           return (
             <Link
-              className="flex w-[580px] h-[450px] flex-col gap-y-2"
+              className="flex w-[500px] h-[450px] flex-col gap-y-2"
               to={`/gallery`}
             >
               <div className="h-2/3 w-full">
