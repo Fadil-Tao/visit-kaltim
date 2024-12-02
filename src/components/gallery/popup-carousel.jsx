@@ -35,7 +35,7 @@ export default function PopupCarousel({array, index}) {
             {array.map((item, index) => {
               return (
                 <CarouselItem key={index}>
-                  <div className="sm:h-[450px] h-full w-auto max-w-full">
+                  <div className="h-[450px]  w-auto max-w-full">
                     <img
                       src={item.img_url}
                       alt={item.title}

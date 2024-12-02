@@ -23,7 +23,7 @@ export default function NavBar() {
             Open
             <TextSearch width={30} height={30} />
           </SheetTrigger>
-          <SheetContent className="bg-red-200">
+          <SheetContent className="bg-black">
             <SheetHeader className="flex items-start justify-start">
               <SheetTitle>Main Menu</SheetTitle>
             </SheetHeader>

@@ -14,7 +14,7 @@ export default function GallerySection() {
       <div className="mb-5 flex items-center justify-between">
         <h3 className="text-2xl font-semibold sm:text-5xl">Gallery</h3>
         <Link
-          to="/gallery"
+          to="/gallery#banner"
           className="group inline-flex items-center text-blue-500 hover:text-blue-700 sm:text-2xl"
         >
           See More
