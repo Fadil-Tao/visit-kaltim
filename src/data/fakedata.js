@@ -167,7 +167,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/0day2gq132h4s4dir0jzb/HL_BukitBiru_8.webp?rlkey=cn8wdgxbkmoz6pztyljvc4sqs&st=hi2vs5bq&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/ws95e1he14frv25dotzu3/HL_BukitBiru_9.webp?rlkey=l3yywkyk50pw3upm3q21abwa3&st=4kolkp9l&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.746183681333!2d116.97423573189668!3d-0.46566953533443417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df664ab30a4470d%3A0x4699afcc1e36fcf9!2sBukit%20Biru%2C%20Kec.%20Tenggarong%2C%20Kabupaten%20Kutai%20Kartanegara%2C%20Kalimantan%20Timur!5e0!3m2!1sid!2sid!4v1733057827403!5m2!1sid!2sid",
   },
   {
@@ -190,7 +190,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/ehbcox0uynl70o1bjc3u0/HL_KebunRaya_6.webp?rlkey=dgv3540ydhaofpozlr6743xjy&st=pczq42ly&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/2lcaf9hu1hzgcig1jr222/HL_KebunRaya_7.webp?rlkey=ip5d1wu6vb5rga91xvdl3y7ak&st=pd95dqzm&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4986.291748632168!2d116.85543237587942!3d-1.136530998852579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df149298f826ab5%3A0xc8c509df2f71cdca!2sKebun%20Raya%20Balikpapan!5e1!3m2!1sid!2sid!4v1733058905198!5m2!1sid!2sid",
   },
   {
@@ -214,7 +214,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/uduq7ad1r22by2h3qundr/HL_Sigeding_7.webp?rlkey=nrufn8vg8dztpifuko97h8z2m&st=59gsxnyy&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/wco0es3ctp5wbbnhhfbov/HL_Sigeding_8.webp?rlkey=hl8dma0bo0aivuetd9v0c8415&st=9kge4z8v&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4986.298011041912!2d118.76149907587937!3d1.1328979988562546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3273531b3c546d07%3A0xc1a516908d95ebe2!2sDanau%20Sigending!5e1!3m2!1sid!2sid!4v1733059464031!5m2!1sid!2sid",
   },
   {
@@ -237,7 +237,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/qmswue99ticnd2zm739fg/HL_Labuan_6.webp?rlkey=9v6pwxrgv6i6k0e690a1yl5tr&st=47j7j38c&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/exzoxf4qpbvggmu51nf0k/HL_Labuan_7.webp?rlkey=ww9n682kiocfd43anyh6i1fvb&st=h3qhlm3v&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9972.14707601837!2d118.68742789482316!3d1.2565795449258288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32734cb76f07da33%3A0x5e898623450bccae!2sLabuan%20Cermin!5e1!3m2!1sid!2sid!4v1733059926162!5m2!1sid!2sid",
   },
   {
@@ -259,7 +259,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/gfxm7qlpn8h1o82schkon/HL_Kersik_5.webp?rlkey=py8134xu6gsb0bdc403imtcur&st=fnu6lt2y&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/31ntryaiaahf5hmq0izar/HL_Kersik_6.webp?rlkey=60uajo4g8bq6e3cual9d3zp5h&st=omyhywkh&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4987.204216538882!2d115.71380938496037!3d-0.3007003989133897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df78b06f3628cc9%3A0x70639e64b5443b57!2sCagar%20Alam%20Kersik%20Luway!5e1!3m2!1sid!2sid!4v1733060215080!5m2!1sid!2sid",
   },
   {
@@ -280,7 +280,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/whek8a7gjalgntfofe69y/HL_Kakaban_4.webp?rlkey=hwkkg9u4dajtgtme4w46dkxf1&st=tb3g1l80&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/ho1y3a0s4al6yasvtq4gx/HL_Kakaban_5.webp?rlkey=8edtnzvctnmxcd38w8vdniih4&st=z9qtiigd&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39870.36909823157!2d118.5134457126412!3d2.139532311848107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x320d57c6c49789a7%3A0x670df44058fc7c5d!2sPulau%20Kakaban!5e1!3m2!1sid!2sid!4v1733060561794!5m2!1sid!2sid",
   },
   {
@@ -302,7 +302,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/obr8kyuidfb5f3wuzmkj6/HL_Margomulyo_5.webp?rlkey=cbufxq88tl9ydsiecddcs0q7s&st=3mgh7xms&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/1rjlqmn1g2w9hh1329vdi/HL_Margomulyo_6.webp?rlkey=922c3xd9baqzd7buw7cky458g&st=jd54ct7v&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39889.042437775875!2d116.79952015499194!3d-1.2264805050328607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df147de1996d301%3A0x41417af05d142cb3!2sMangrove%20Margo%20Mulyo!5e1!3m2!1sid!2sid!4v1733060906264!5m2!1sid!2sid",
   },
   {
@@ -323,7 +323,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/5ff6iox4m0uk5j9yzjv73/HL_tnk_4.webp?rlkey=doqp8ctu192d6dn0c6f54m7pp&st=igwuhdq1&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/oorwnrrzx8zuy3nvrwk2e/HL_tnk_5.webp?rlkey=m1yezh6aafm6me2kukw3hd1ku&st=sjw2schv&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d568722.5864418026!2d116.89766986653899!3d0.12125492068384211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x320986f1aff7eb11%3A0x43861657c86e075a!2sTaman%20Nasional%20Kutai!5e1!3m2!1sid!2sid!4v1733061201536!5m2!1sid!2sid",
   },
   {
@@ -344,7 +344,7 @@ export const Destinations = [
       "https://www.dropbox.com/scl/fi/wt5v4jbm43lehqy8fuulk/HL_bangkirai_4.webp?rlkey=g3lz03de7f2msizdl4lff7vpa&st=ie8mrxkb&dl=0&raw=1",
       "https://www.dropbox.com/scl/fi/h2tfybwdmjevo9zb3ylc6/HL_bangkirai_5.webp?rlkey=d8hn3xp6wnzos2kqd2xbu6zyg&st=jdhgs6yn&dl=0&raw=1",
     ],
-    location_url:
+    location_src:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100520.57064373778!2d116.89526614244795!3d-1.0394918748754907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df6b43dd14fa82f%3A0x910d89815a4d33f3!2sBukit%20Bangkirai!5e1!3m2!1sid!2sid!4v1733061562730!5m2!1sid!2sid",
   },
   {
