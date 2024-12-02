@@ -1,6 +1,7 @@
 import { Destinations } from "@/data/fakedata";
 import { Dot, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+
 
 export default function GallerySection() {
 

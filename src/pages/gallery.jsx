@@ -47,7 +47,7 @@ export default function GalleryPage() {
       <AnimatedLayout>
         <Banner
           title={"GALLERY"}
-          img={huaGuang}
+          img={"https://www.dropbox.com/scl/fi/anjr4obq6nwv0eanrxz0z/huaguang-min.jpg?rlkey=f9l3h5juyztx5ktlg3h5ts9sg&st=tksbydqm&dl=0&raw=1"}
         />
         <div className="gap-y-28 px-5 sm:grid sm:px-24">
           <StickyNav />
