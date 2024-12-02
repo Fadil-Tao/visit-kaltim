@@ -31,7 +31,7 @@ export default function GallerySection() {
           return (
             <Link
               className="flex w-[500px] h-[450px] flex-col gap-y-2"
-              to={`/gallery`}
+              to={`/gallery#banner`}
             >
               <div className="h-2/3 w-full">
                 <img
