@@ -28,14 +28,14 @@ export default function PopupCarousel({array, index}) {
   }, [api]);
 
   return (
-    <Carousel className="h-full w-full" setApi={setApi}>
+    <Carousel className="h-full w-full overflow-hidden" setApi={setApi}>
       <div className="h-4/5">
         <div className="h-full grid place-items-center">
           <CarouselContent className="">
             {array.map((item, index) => {
               return (
-                <CarouselItem key={index}>
-                  <div className="h-[450px]  w-auto max-w-full">
+                <CarouselItem key={index} className="">
+                  <div className="h-[450px] w-auto max-w-full">
                     <img
                       src={item.img_url}
                       alt={item.title}
@@ -58,14 +58,14 @@ export default function PopupCarousel({array, index}) {
         </div>
       </div>
 
-      <div className="1/5">
+      <div className="1/5 w-full">
         <div className="flex w-full items-end justify-end">
           <p className="">
             {current}/{array.length}
           </p>
         </div>
-        <div className="flex h-1/5 w-full items-center justify-center border-t-2 border-border py-8">
-          <div className="flex justify-center gap-2">
+        <div className="flex h-1/5 w-full items-center overflow-hidden sm:justify-center border-t-2 border-border py-8">
+          <div className="flex sm:justify-center w-full overflow-hidden gap-2">
             {array.map((item, index) => (
               <div
                 key={index}

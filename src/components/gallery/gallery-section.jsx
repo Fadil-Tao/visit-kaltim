@@ -3,10 +3,6 @@ import PopupCarousel from "./popup-carousel";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 
@@ -52,23 +48,4 @@ export default function GallerySectionCol({ id, title, desc, items }) {
 }
 
 
-// unused
-function PopupSection({ key, src, text, array }) {
-  return (
-    <Dialog className="w-[600px] bg-black">
-      <DialogTrigger key={key} className={`w-full`}>
-        <img
-          src={src}
-          alt=""
-          className="h-72 w-full transform rounded-2xl object-cover transition-transform hover:scale-125"
-        />
-        <p className="absolute bottom-4 left-4 rounded-md bg-black bg-opacity-50 px-2 py-1 text-lg font-semibold transition-all group-hover:bg-opacity-80">
-          {text}
-        </p>
-      </DialogTrigger>
-      <DialogContent className="h-screen bg-zinc-800 sm:min-w-full">
-        <PopupCarousel array={array} />
-      </DialogContent>
-    </Dialog>
-  );
-}
+
