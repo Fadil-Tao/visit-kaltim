@@ -1,5 +1,5 @@
 import { HeartHandshake, BookOpenText, Star, Car } from "lucide-react";
-
+//  dipakai buat section about dari halaman destination detail
 export default function AboutSection({text,proximity,highlight}) {
   return (
     <div
@@ -13,6 +13,7 @@ export default function AboutSection({text,proximity,highlight}) {
       <div className="flex flex-wrap sm:w-full justify-center sm:justify-between gap-y-6 sm:flex-nowrap sm:p-5">
         <div className="flex flex-col items-center justify-center gap-y-3 sm:gap-y-12 sm:p-16 sm:px-32">
           <p className="text-5xl">Highlight</p>
+          {/* komponen shadcn */}
           <Star size={72} />
           <p dangerouslySetInnerHTML={{__html: highlight}}></p>
         </div>

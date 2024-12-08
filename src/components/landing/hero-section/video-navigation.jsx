@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useContext } from "react";
 import { videoNavigationContext } from "../../../context/video.context";
-
+//  buat navigasi video selanjutnya dan sebelumnya 
 export default function VideoNavigation() {
   const { index, setIndex, currentPlace } = useContext(videoNavigationContext);
 

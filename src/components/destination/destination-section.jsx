@@ -1,5 +1,5 @@
 import { HashLink as Link } from "react-router-hash-link";
-
+//  section destination , gambal daftar destinasi yang ada 7 itu , menerima daftar sebagai parameter
 export default function DestinationSection({ id, title, desc, items }) {
   return (
     <section
@@ -13,6 +13,7 @@ export default function DestinationSection({ id, title, desc, items }) {
         <p className="text-5xl font-semibold">{title}</p>
         <p className="">{desc}</p>
       </div>
+      {/* iterasi dari parameter daftar */}
       {items.map((item, index) => {
         return (
           <Link

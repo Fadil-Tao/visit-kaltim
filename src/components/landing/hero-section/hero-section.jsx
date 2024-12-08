@@ -12,7 +12,7 @@ import MovingLabel from "./moving-label";
 import { ParallaxBanner } from "react-scroll-parallax";
 import ReactPlayer from "react-player";
 import { useRef } from "react";
-
+//  video di hero section
 export default function HeroSection() {
   const { scale, xyPercent } = useScaleTransformPercentage();
   const { xPercent, yPercent } = xyPercent;

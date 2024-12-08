@@ -8,7 +8,7 @@ import DestinationPage from './pages/destination'
 import DestinationDetailPage from './pages/destination-detail'
 import GalleryPage from './pages/gallery'
 
-
+//  routing url 
 const router = createBrowserRouter([
   {
       path: '',
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
               element: <GalleryPage/>
           },
           {
-              path:'/destination/:slug',
+              path:'/destination/:slug', // slug ini buat dinamik item didalamnya, jadi isinya bisa berdasarkan title dari destinasi
               element: <DestinationDetailPage/>
           }
       ]   

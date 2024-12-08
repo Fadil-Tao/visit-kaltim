@@ -2,9 +2,9 @@ import { Destinations } from "@/data/fakedata";
 import { Dot, ArrowRight } from "lucide-react";
 import { HashLink as Link } from "react-router-hash-link";
 
-
+//  bagian gallery di halaman landing page
 export default function GallerySection() {
-
+//  ngacak mau ambil dari gallery yang mana, ini random
   const randomGallery = Destinations.sort(() => 0.5 - Math.random()).slice(
     0,
     4,

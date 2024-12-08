@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
-
+// pop up carousel dipakai ketika mengklik salah satu gambar di gallery section maka akan ke muncul pop up ini
 export default function PopupCarousel({array, index}) {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);

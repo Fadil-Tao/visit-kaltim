@@ -1,4 +1,6 @@
+//  section testimonial dari halaman landing page
 export default function TestimonialSection() {
+  // daftar testimoni 
   const testimonials = [
     {
       img: "https://www.elnuevoherald.com/ultimas-noticias/2mvzws/picture282062843/alternates/LANDSCAPE_1140/USATSI_9012743.jpg",
@@ -27,6 +29,7 @@ export default function TestimonialSection() {
         <p>Some Famous People That has been here</p>
       </div>
     <div className="flex justify-evenly sm:flex-row flex-wrap">
+      {/* menampilkan testimonial dari daftar testi diatas satu per satu*/}
         {testimonials.map((item) => {
             return (
                 <div className="py-5 px-5 w-[298px] text-center flex flex-col justify-center items-center gap-y-2 ">

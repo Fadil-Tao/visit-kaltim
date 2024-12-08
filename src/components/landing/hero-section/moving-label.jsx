@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState, useRef } from "react";
 import { VideoPausedByHoverContext, VideoPausedByToggleContext } from "../../../context/video.context";
-
+//  ga kepake
 export default function MovingLabel({
   startX,
   startY,

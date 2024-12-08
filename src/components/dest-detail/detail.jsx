@@ -1,3 +1,4 @@
+//  bagian detail dari halaman destination detail
 export default function DetailSection({text}) {
   return (
     <div className="sm:grid gap-y-8">

@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-
+// ga dipake 
 export default function SearchDestination() {
   return (
     <div className="relative w-full  mx-auto rounded-full bg-zinc-800 shadow-md">

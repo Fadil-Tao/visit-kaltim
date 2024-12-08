@@ -1,5 +1,5 @@
-import { HeartHandshake, BookOpenText } from "lucide-react";
-
+import { HeartHandshake, BookOpenText } from "lucide-react"; // import lucide icon
+//  yang digunakan untuk section about di halaman landng page
 export default function AboutSection() {
   return (
     <div
@@ -16,6 +16,7 @@ export default function AboutSection() {
       <div className="flex justify-between flex-wrap sm:flex-nowrap gap-y-6 sm:p-5">
         <div className="flex flex-col justify-center items-center sm:gap-y-12 gap-y-3">
           <p className="text-5xl">Vision</p>
+          {/* komponen lucide icon */}
           <HeartHandshake size={72} />
           <p>
             To transform East Kalimantan into a top sustainable tourism
@@ -26,6 +27,7 @@ export default function AboutSection() {
         </div>
         <div className="flex flex-col justify-center items-center sm:gap-y-12 sm:p-5">
           <p className="text-5xl">Mission</p>
+          {/* komponen lucide icon */}
           <BookOpenText size={72} />
           <p >
             We aim to preserve Kaltim's natural beauty while promoting the

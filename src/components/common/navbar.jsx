@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import { TextSearch } from "lucide-react";
 
+// komponnen ini adalah navbar 
 export default function NavBar() {
   return (
     <nav className="absolute top-0 z-30 flex w-full items-center justify-between gap-x-12 bg-transparent text-2xl font-semibold transition-colors duration-300 sm:px-24 sm:py-8 hover:bg-black ">
@@ -18,6 +19,8 @@ export default function NavBar() {
         </Link>
       </div>
       <div className="flex gap-x-20">
+        {/* disini adalah navbar buat mobile */}
+        {/* sheet component dari shadcn cek website shadcn */}
         <Sheet>
           <SheetTrigger className="flex place-items-center gap-x-2 rounded-bl-2xl bg-black px-4 py-2 text-xs sm:hidden">
             Open
@@ -43,7 +46,7 @@ export default function NavBar() {
             </div>
           </SheetContent>
         </Sheet>
-
+    {/* disini komponen navbar khusus untuk desktop */}
         <div className={`hidden sm:flex gap-12 text-shadow-lg`}>
           <Link to={"/#about"} smooth>About</Link>
           <Link to={"/#popularDestination"} smooth>Destination</Link>

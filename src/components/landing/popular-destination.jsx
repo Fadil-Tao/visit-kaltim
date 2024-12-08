@@ -3,7 +3,10 @@ import { HashLink as Link } from "react-router-hash-link";
 import { ArrowRight } from "lucide-react";
 import { Destinations } from "@/data/fakedata";
 
+//  kontainer dari popular destination
 export default function PopularDestSection() {
+  // nge filter jadi cuma ambil salah satu dari tiga tipe, hasilnya bakal
+  // 1 beach, 1 nature, 1 other
   const destination = Destinations.reduce((acc, item) => {
     if (!acc.some((dest) => dest.type === item.type)) {
       acc.push(item);

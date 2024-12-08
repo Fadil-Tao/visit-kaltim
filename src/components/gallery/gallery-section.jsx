@@ -6,6 +6,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
+// ini sama kek destination section 
 export default function GallerySectionCol({ id, title, desc, items }) {
   return (
     <section

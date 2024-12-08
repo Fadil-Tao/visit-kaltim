@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 
+
+//  komponen banner digunakan untuks sebagai banner di
+//  halaman daftar destinasi, daftar galeri, dan daftar destinasi
 export default function Banner({ title, location, img }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    //  ngeload image kalau image jadi semacam image loader
     const imgLoader = new Image();
     imgLoader.src = img;
     imgLoader.onload = () => setIsLoading(false);
@@ -19,7 +23,8 @@ export default function Banner({ title, location, img }) {
           </div>
         </div>
       )}
-
+    {/*  parralax effect banner */}
+    {/* is loading ngecek apakah loading ato gak */}
       {!isLoading && (
         <ParallaxBanner
           layers={[
